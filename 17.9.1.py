@@ -41,13 +41,13 @@ def binary_search(arr, num, left, right):
     if left > right:  # если левая граница превысила правую,
         return ("Введенное число отсутствует в списке")  # значит элемент отсутствует
 
-    middle = (right + left) // 2  # находимо середину
+    middle = (right + left) // 2  # находим середину
     if arr[middle] == num:  # если элемент в середине,
         return middle  # возвращаем этот индекс
     elif num < arr[middle]:  # если элемент меньше элемента в середине
         # рекурсивно ищем в левой половине
         return binary_search(arr, num, left, middle - 1)
-    else:  # иначе в правой
+    else:  # иначе рекурсивно ищем в правой половине
         return binary_search(arr, num, middle + 1, right)
 
 
