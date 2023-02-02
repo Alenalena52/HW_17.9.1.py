@@ -39,7 +39,7 @@ print(merge_sort(arr))
 
 def binary_search(arr, num, left, right):
     if left > right:  # если левая граница превысила правую,
-        return False  # значит элемент отсутствует
+        return ("Введенное число отсутствует в списке")  # значит элемент отсутствует
 
     middle = (right + left) // 2  # находимо середину
     if arr[middle] == num:  # если элемент в середине,
